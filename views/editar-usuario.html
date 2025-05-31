@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BasCode - Edit User</title>
+    <link rel="stylesheet" href="/assets/css/bootstrap.css">
+</head>
+
+<body>
+    {{template "header"}}
+
+    <div class="container-fluid">
+        <div class="row mt-4">
+        
+            <div class="col-12">
+                <h3>Edit User</h3>
+                <form class="editar-usuario">
+                    <div class="form-group">
+                        <label for="nome">Name</label>
+                        <input type="text" class="form-control" id="nome" name="nome" placeholder="Enter the name"
+                            value="{{.Nome}}" required="required">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="text" class="form-control" id="email" name="email" placeholder="Enter the email"
+                            value="{{.Email}}" required="required">
+                    </div>
+                    <div class="form-group">
+                        <label for="nome">Nickname</label>
+                        <input type="text" class="form-control" id="nick" name="nick" placeholder="Enter the name"
+                            value="{{.Nick}}" required="required">
+                    </div>
+                    <button class="btn btn-primary" type="submit">Save</button>
+
+                </form>
+            </div>
+        </div>
+    </div>
+    {{template "footer"}}
+    {{template "scripts"}}
+    <script src="/assets/js/usuario.js"></script>
+
+</body>
+
+</html>

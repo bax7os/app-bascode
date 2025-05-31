@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login on BasCode</title>
+    <link rel="stylesheet" href="/assets/css/login.css">
+    <link rel="icon" type="image/png"   href="https://genfavicon.com/tmp/icon_2b6ad25bd0f4b907220bf87a6a96ad46.ico">
+</head>
+<body>
+    <div class="container-login">
+        <div>
+            <form action="" class="bascode-form" id="formulario-login">
+                <span>Welcome to BasCode</span>
+                <div>
+                    <input type="email" name="email" id="email" placeholder="E-mail">
+                    
+                </div>
+                <div>
+                <input type="password" name="senha" id="senha" placeholder="Password">
+            </div>
+            <a href="/criar-usuarios">Sign up</a>
+            <button type="submit" class="btn-bascode">Login</button>
+            
+            </form>
+        </div>
+    </div>
+   {{template "scripts"}}
+    <script src="../assets/js/login.js"></script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+a {
+    font-size: 16px;
+    color: #528945;
+    text-decoration: none;
+
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+input {
+    outline: none;
+    border: none;
+    color: #528945;
+    line-height: 1.2;
+    font-size: 18px;
+    display: block;
+    width: 100%;
+    background: transparent;
+    height: 60px;
+    padding: 0px 20px 0 38px;
+}
+
+input::placeholder {
+    color: #8f8fa1;
+}
+
+.container-login {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    background: #528945;
+    background: -webkit-linear-gradient(to right, #528945, #8f8fa1);
+    background: linear-gradient(to right, #528945, #8f8fa1);
+}
+
+.container-login>div {
+    width: 390px;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    padding: 50px 0 90px 0;
+}
+
+.bascode-form>span {
+    font-size: 30px;
+    color: #528945;
+    line-height: 1.2;
+    text-align: center;
+    display: block;
+    width: 100%;
+    padding-bottom: 30px;
+}
+
+.bascode-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+.bascode-form a {
+    align-self: flex-start; 
+    margin-left: 38px; 
+    margin-bottom: 10px; 
+}
+.bascode-form>div {
+    width:100%;
+    margin-bottom: 32px;
+    margin-bottom: 16px;
+}
+
+.btn-bascode {
+    font-size: 16px;
+    color: #fff;
+    line-height: 1.2;
+    padding: 0 20px;
+    width: 70%;
+    background-color: #528945;
+    outline: none;
+    border: none;
+    border-radius: 8px;
+    height: 40px;
+}
+
+.btn-bascode:hover {
+    cursor: pointer;
+    background-color: #447a37;
+    color: #fff;
+
+}

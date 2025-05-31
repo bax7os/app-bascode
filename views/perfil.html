@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BasCode - My Profile</title>
+    <link rel="icon" type="image/png"   href="https://genfavicon.com/tmp/icon_2b6ad25bd0f4b907220bf87a6a96ad46.ico">
+    <link rel="stylesheet" href="/assets/css/bootstrap.css">
+</head>
+<body>
+    {{template "header"}}
+
+
+    <div class="container-fluid">
+        <div class="row mt-4">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            My Profile
+                        </h5>
+                        <h6 class="card-subtitle mb-2 text-muted">
+                            {{.Nome}} - {{.Nick}} - Member since: {{.CriadoEm.Format "02/01/2006"}}
+                        </h6>
+                        <p class="card-text">
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#modal-seguidores">Followers: {{len .Seguidores}} </a> 
+                       
+                        </p>
+                        <p class="card-text"><a href="#"data-bs-toggle="modal"data-bs-target="#modal-seguindo">Following: {{len .Seguindo}}</a></p>
+                        
+                        <div class="row">
+                            <div class="col-12">
+                                <a href="/editar-usuario" class="card-link">
+                                    <button class="btn btn-primary">Edit data</button>
+                                </a>
+                                <a href="/atualizar-senha" class="card-link">
+                                    <button class="btn btn-primary">Change password</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-12">
+              <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">My posts </h5>
+             
+                        <p class="card-text">
+                            {{range .Publicacoes}}
+                                {{template "publicacao-com-permisao" .}}
+                            {{else}}
+                                <p class="card-text">No posts found</p>
+                            {{end}}
+                        </p>
+                
+               
+                </div>
+              </div>
+            </div>
+        </div>
+        <a id="deletar-usuario" class="card-link">
+            <button class="btn btn-danger">
+                Excluir Conta
+            </button>
+        </a>
+    </div>
+
+   {{template "footer"}}
+    {{template "modal-seguidores" .}}
+    {{template "modal-seguindo" .}}
+ 
+    {{template "scripts"}}
+
+    <script src="/assets/js/publicacoes.js"></script>
+    <script src="/assets/js/usuario.js"></script>
+</body>
+</html>

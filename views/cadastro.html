@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up on BasCode</title>
+    <link rel="icon" type="image/png"   href="https://genfavicon.com/tmp/icon_2b6ad25bd0f4b907220bf87a6a96ad46.ico">
+
+    <link rel="stylesheet" href="assets/css/login.css">
+</head>
+
+<body>
+    <div class="container-login">
+        <div>
+            <form action="" class="bascode-form" id="formulario-cadastro">
+                <span>Sign up</span>
+                <div>
+                    <input type="text" name="nome" id="nome" placeholder="Name" required="required">
+
+                </div>     
+                 <div>
+                    <input type="text" name="email" id="email" placeholder="E-mail" required="required">
+
+                </div>
+                <div>
+                    <input type="text" name="nick" id="nick" placeholder="Nickname" required="required">
+                </div>
+          
+                <div>
+                    <input type="password" name="senha" id="senha" placeholder="Password" required="required">
+                </div>
+                <div>
+                    <input type="password" name="confirmar-senha" id="confirmar-senha" placeholder="Confirm Password" required="required">
+                </div>
+                <a href="/login">Already have an account?</a>
+                <button type="submit" class="btn-bascode">Sign up</button>
+
+            </form>
+        </div>
+    </div> 
+    {{template "scripts"}}
+    <script src="assets/js/cadastro.js"></script>
+   
+</body>
+
+</html>

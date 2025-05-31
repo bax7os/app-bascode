@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BasCode - Users</title>
+    <link rel="icon" type="image/png"   href="https://genfavicon.com/tmp/icon_2b6ad25bd0f4b907220bf87a6a96ad46.ico">
+    <link rel="stylesheet" href="/assets/css/bootstrap.css">
+</head>
+<body>
+    {{template "header"}}
+
+    <div class="container-fluid">
+        <div class="row mt-4">
+            <div class="col-12">
+              <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Users </h5>
+                    {{ range .}}
+                        <p class="card-text">{{.Nome}} - <a href="/usuarios/{{.ID}}">{{.Nick}}</a> - Member since: {{.CriadoEm.Format "02/01/2006"}}</p>
+                    {{else}}
+                        <p class="card-text">No users found</p>
+                    {{end}}
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    {{template "footer"}}
+    {{template "scripts"}}
+</body>
+</html>
