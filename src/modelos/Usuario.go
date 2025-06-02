@@ -16,6 +16,7 @@ type Usuario struct {
 	Email       string       `json:"email"`
 	Nick        string       `json:"nick"`
 	CriadoEm    time.Time    `json:"criadoEm"`
+	FotoPerfil  string       `json:"fotoPerfil" db:"foto_perfil"`
 	Seguidores  []Usuario    `json:"seguidores"`
 	Seguindo    []Usuario    `json:"seguindo"`
 	Publicacoes []Publicacao `json:"publicacoes"`
